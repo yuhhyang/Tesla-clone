@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 function Header() {
+    const [burgerStatus, setBurgerStatus] = useState(false);
     return (
         <Container>
             <a>
@@ -17,11 +18,11 @@ function Header() {
             <RightMenu>
                 <a href='#'>Shop</a>
                 <a href='#'>Tesla Account</a>
-                <CustomMenu/>
+                <CustomMenu onClick={() => setBurgerStatus(true)}/>
             </RightMenu>
-            <BurgerNav>
+            <BurgerNav show={burgerStatus}>
                 <CloserWrapper>
-                    <CustomClose/>
+                    <CustomClose onClick={() => setBurgerStatus(false)}/>
                 </CloserWrapper>
                 <li><a href='#'>Existing Inventory</a></li>
                 <li><a href='#'>Used Inventory</a></li>
@@ -96,14 +97,17 @@ const BurgerNav = styled.div`
     display: flex;
     flex-direction: column;
     text-align: start;
+    /* closeIcon */
+    transform: ${props => props.show ? 'translateX(0)' : 'translateY(100%)'};
+    /* closeIcon transition */
+    transition: transform 0.2s;
     li {
         font-size: 14px;
         padding: 15px 0;
-
     }
     li:hover {
         background-color: #F0F0F0;
-        width: 180px;
+        width: 200px;
         height: 50px;
         border-radius: 8px;
     }
