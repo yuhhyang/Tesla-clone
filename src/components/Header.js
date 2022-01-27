@@ -66,10 +66,16 @@ const Menu = styled.div`
     justify-content: center;
     flex: 1;
     a {
-        font-weight: 600;
+        font-weight: 500;
         text-transform: uppercase;
-        padding: 0 10px;
+        padding: 5px 10px;
         flex-wrap: nowrap;
+    }
+    a:hover {
+        background-color: #A7C0CF;
+        border-radius: 10px;
+        cursor: pointer;
+        color: black;
     }
     @media(max-width: 768px){
         display: none;
@@ -109,13 +115,14 @@ const BurgerNav = styled.div`
         padding: 15px 0;
     }
     li:hover {
-        background-color: #F0F0F0;
-        width: 200px;
-        height: 50px;
-        border-radius: 8px;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        cursor: pointer;
+        color: black;
     }
     a {
         font-weight: 600;
+        padding: 0 8px;
     }
 ` 
 const CustomClose = styled(CloseIcon)`
