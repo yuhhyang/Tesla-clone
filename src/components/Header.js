@@ -66,7 +66,7 @@ const Menu = styled.div`
     justify-content: center;
     flex: 1;
     a {
-        font-weight: 500;
+        font-weight: 600;
         text-transform: uppercase;
         padding: 5px 10px;
         flex-wrap: nowrap;
@@ -87,7 +87,14 @@ const RightMenu = styled.div`
     a {
         font-weight: 600;
         text-transform: uppercase;
-        margin-right: 10px;
+        padding: 5px 10px;
+        flex-wrap: nowrap;
+    }
+    a:hover {
+        background-color: #A7C0CF;
+        border-radius: 10px;
+        cursor: pointer;
+        color: black;
     }
 `
 const CustomMenu = styled(MenuIcon)`
