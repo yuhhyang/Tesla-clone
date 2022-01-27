@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import MenuIcon from '@material-ui/icons/Menu';
-
+import CloseIcon from '@material-ui/icons/Close';
 function Header() {
     return (
         <Container>
@@ -20,6 +20,9 @@ function Header() {
                 <CustomMenu/>
             </RightMenu>
             <BurgerNav>
+                <CloserWrapper>
+                    <CustomClose/>
+                </CloserWrapper>
                 <li><a href='#'>Existing Inventory</a></li>
                 <li><a href='#'>Used Inventory</a></li>
                 <li><a href='#'>Trade-In</a></li>
@@ -108,3 +111,10 @@ const BurgerNav = styled.div`
         font-weight: 600;
     }
 ` 
+const CustomClose = styled(CloseIcon)`
+    cursor: pointer;
+`
+const CloserWrapper = styled.div`
+    display: flex;
+    justify-content: flex-end;
+`
