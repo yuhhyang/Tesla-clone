@@ -7,11 +7,15 @@ function Header() {
                 <img src="/images/logo.svg" alt="logo" />
             </a>
             <Menu>
-                <p><a href=''>Model 3</a></p>
-                <p><a href=''>Model Y</a></p>
-                <p><a href=''>Model S</a></p>
-                <p><a href=''>Model X</a></p>
+                <a href='#'>Model 3</a>
+                <a href='#'>Model Y</a>
+                <a href='#'>Model S</a>
+                <a href='#'>Model X</a>
             </Menu>
+            <RightMenu>
+                <a href='#'>Shop</a>
+                <a href='#'>Tesla Account</a>
+            </RightMenu>
         </Container>
     );
 }
@@ -33,10 +37,17 @@ const Menu = styled.div`
     align-items: center;
     justify-content: center;
     flex: 1;
-    p {
+    a {
         font-weight: 600;
         text-transform: uppercase;
         padding: 0 10px;
         flex-wrap: nowrap;
+    }
+`
+const RightMenu = styled.div`
+    a {
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-right: 10px;
     }
 `
