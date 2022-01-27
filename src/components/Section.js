@@ -12,9 +12,13 @@ function Section({ title, description, backgroundImg, leftBtnText, rightBtnText 
                     <LeftButton>
                         {leftBtnText}
                     </LeftButton>
-                    <RightButton>
-                        {rightBtnText}
-                    </RightButton>
+                    {/* 因為 Accessories 只有一個 button， leftbutton 無法置中顯示 */}
+                    { rightBtnText &&  
+                        <RightButton>
+                            {rightBtnText}
+                        </RightButton>
+                    }
+                    
                 </ButtonGroup>
                 <DownArrow src="./images/down-arrow.svg"/>
             </Buttons>
